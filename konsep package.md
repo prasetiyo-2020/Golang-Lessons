@@ -51,7 +51,18 @@ example/
 ``` golang
 package calculation
 
-// Nama Fungsi harus diawali huruf Kapital karena sifatnya publik dan lintas paket
+// Nama fungsi harus diawali huruf Kapital agar dapat diakses di paket lain
+func Add(number int, numberTwo int) int {
+	return add(number, numberTwo)
+}
+
+// Nama fungsi yang diawali huruf kecil hanya dapat digunakan pada paket ini saja
+func add(number int, numberTwo int) int {
+	return number + numberTwo
+}
+
+package calculation
+
 func Add(number int, numberTwo int) int {
 	return number + numberTwo
 }
