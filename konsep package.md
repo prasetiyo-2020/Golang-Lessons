@@ -5,7 +5,7 @@ example/
 ├── go.mod
 ├── go.sum
 ├── hello1.go
-├── hello2.go
+└── hello2.go
 ```
 
 File hello1.go
@@ -44,7 +44,7 @@ example/
 │   └── add.go
 ├── go.mod
 ├── go.sum
-├── hello1.go
+└── hello1.go
 ```
 
 #### File add.go
