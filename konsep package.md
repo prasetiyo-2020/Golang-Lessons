@@ -51,6 +51,7 @@ example/
 ``` golang
 package calculation
 
+// Nama Fungsi harus diawali huruf Kapital karena sifatnya publik dan lintas paket
 func Add(number int, numberTwo int) int {
 	return number + numberTwo
 }
