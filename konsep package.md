@@ -1,3 +1,13 @@
+#### Struktur Folder
+
+```
+example/
+├── go.mod
+├── go.sum
+├── hello1.go
+├── hello2.go
+```
+
 File hello1.go
 ``` golang
 package main
@@ -26,4 +36,47 @@ func TestAja() string {
 $ go run hello1.go hello2.go
 > Prasetiyo
 > Saya Prasetiyo, saya suka berbagi setiap tanggal 10
+```
+
+```
+example/
+├── calculation/
+│   └── add.go
+├── go.mod
+├── go.sum
+├── hello1.go
+```
+
+#### File add.go
+``` golang
+package calculation
+
+func Add(number int, numberTwo int) int {
+	return number + numberTwo
+}
+```
+
+#### File hello1.go
+``` golang
+package main
+
+import (
+	"example/calculation"
+	"fmt"
+)
+
+func main() {
+	firstName := "Prasetiyo"
+	fmt.Println(firstName)
+
+	result := calculation.Add(1, 5)
+
+	fmt.Println(result)
+}
+```
+
+```
+$ go run hello1.go
+> Prasetiyo
+> 6
 ```
