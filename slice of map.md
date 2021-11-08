@@ -22,3 +22,28 @@ $ go run .
 > map[Nama:Diana Score:A]
 > map[Nama:Gem Score:C] 
 ```
+
+``` golang
+package main
+
+import "fmt"
+
+func main() {
+	students := []map[string]string{
+		{"Name": "Prasetiyo", "Score": "B"},
+		{"Name": "Diana", "Score": "A"},
+		{"Name": "Gem", "Score": "C"},
+	}
+
+	for _, student := range students {
+		fmt.Println(student["Name"], " - ", student["Score"])
+	}
+}
+```
+
+```
+$ go run .
+> Prasetiyo  -  B
+> Diana  -  A
+> Gem  -  C
+``` 
