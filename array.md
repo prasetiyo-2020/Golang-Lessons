@@ -122,3 +122,45 @@ $ go run .
 > index :  4  language :  C#
 > index :  5  language :  C
 ```
+
+## Mencari nilai rata-rata pada array
+``` golang
+package main
+
+import "fmt"
+
+func main() {
+	// hitung rata-rata
+	scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
+
+	// Penjumlahan isi dari map
+	var total int
+	for _, score := range scores {
+		total = total + score
+	}
+
+	// Jumlah dari map
+	length := len(scores)
+
+	// Hasil pecahan
+	average := float64(total) / float64(length)
+
+	// Hasil bilangan bulat
+	averageInt := total / length
+
+	fmt.Println("Menghasilkan bilangan pecahan : ")
+	fmt.Println(average)
+	fmt.Println("=======================")
+	fmt.Println("Menghasilkan bilangan bulat : ")
+	fmt.Println(averageInt)
+}
+
+```
+```
+$ go run .
+> Menghasilkan bilangan pecahan : 
+> 83.125
+> =======================
+> Menghasilkan bilangan bulat :
+> 83
+```
