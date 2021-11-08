@@ -53,3 +53,61 @@ index :  35  letter :  a
 index :  36  letter :  n
 index :  37  letter :  g
 ```
+
+
+
+#### Jika variabel tidak akan digunakan maka ubah nama variabel menjadi "_"
+```golang
+package main
+import "fmt"
+
+func main() {
+	judul := "Saya sedang belajar fundamental golang"
+
+	for _, letter := range judul {
+		fmt.Println("letter : ", string(letter))
+	}
+}
+```
+
+```
+go run hello1.go
+letter :  S
+letter :  a
+letter :  y
+letter :  a
+letter :
+letter :  s
+letter :  e
+letter :  d
+letter :  a
+letter :  n
+letter :  g
+letter :
+letter :  b
+letter :  e
+letter :  l
+letter :  a
+letter :  j
+letter :  a
+letter :  r
+letter :   
+letter :  f
+letter :  u
+letter :  n
+letter :  d
+letter :  a
+letter :  m
+letter :  e
+letter :  n
+letter :  t
+letter :  a
+letter :  l
+letter :   
+letter :  g
+letter :  o
+letter :  l
+letter :  a
+letter :  n
+letter :  g
+```
