@@ -164,3 +164,34 @@ $ go run .
 > Menghasilkan bilangan bulat :
 > 83
 ```
+
+## Mencari nilai dengan kondisi tertentu pada array
+``` golang
+package main
+
+import "fmt"
+
+func main() {
+	// Mencari nilai >= 90
+	scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
+
+	// Membuat variabel kosong untuk menampung nilai array
+	var goodScores []int
+
+	// Melakukan perulangan forEach dengan kondisi score >= 90
+	for _, score := range scores {
+		if score >= 90 {
+			goodScores = append(goodScores, score)
+		}
+	}
+
+	fmt.Println("Isi array goodScores saat ini : ")
+	fmt.Println(goodScores)
+}
+```
+
+```
+$ go run .
+> Isi array goodScores saat ini : 
+> [100 92 93]
+```
