@@ -86,3 +86,57 @@ $ go run .
 > Total pembagian :
 > 1
 ```
+
+### Contoh ke-3
+```golang
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+func main() {
+	result, err := calculate(5, 4, "*")
+	if err != nil {
+		fmt.Println("Terjadi Kesalahan")
+		fmt.Println(err.Error())
+	}
+
+	fmt.Println(result)
+}
+
+func calculate(number int, numberTwo int, operation string) (int, error) {
+	var result int
+	var errorResult error
+
+	switch operation {
+	case "+":
+		result = number + numberTwo
+	case "-":
+		result = number - numberTwo
+	case "*":
+		result = number * numberTwo
+	case "/":
+		result = number / numberTwo
+	default:
+		errorResult = errors.New("unknown operation")
+	}
+
+	return result, errorResult
+}
+```
+
+#### Output saat argumen tidak sesuai kriteria
+```
+$ go run .
+> Terjadi Kesalahan
+> unknown operation
+> 0
+```
+
+#### Output saat argumen sesuai kriteria
+```
+$ go run .
+> 20
+```
