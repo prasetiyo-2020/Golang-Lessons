@@ -77,3 +77,38 @@ $ go run .
 > {3 Rama Ristawan rama2020@yahoo.com true}   
 > {4 Azis Saputra azis2020@yahoo.com true}  
 ```
+
+## Struct sebagai parameter
+``` golang
+type User struct {
+	id        int
+	firstName string
+	lastName  string
+	email     string
+	isActive  bool
+}
+
+func main() {
+	user1 := User{1, "Yosho", "Prasetiyo", "prasetiyo2020@yahoo.com", true}
+	user2 := User{2, "Diana", "Syafitri", "diana2020@yahoo.com", true}
+
+	displayUser1 := displayUser(user1)
+	displayUser2 := displayUser(user2)
+	fmt.Println(displayUser1)
+	fmt.Println(displayUser2)
+}
+
+// "User" sebagai tipe data
+func displayUser(user User) string {
+	result := fmt.Sprintf("Name : %s %s \nEmail : %s", user.firstName, user.lastName, user.email)
+	return result
+}
+```
+
+```
+$ go run .
+> Name : Yosho Prasetiyo
+> Email : prasetiyo2020@yahoo.com
+> Name : Diana Syafitri      
+> Email : diana2020@yahoo.com
+```
