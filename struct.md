@@ -112,3 +112,70 @@ $ go run .
 > Name : Diana Syafitri      
 > Email : diana2020@yahoo.com
 ```
+
+## Embedded struct
+``` golang
+package main
+
+import "fmt"
+
+type User struct {
+	id        int
+	firstName string
+	lastName  string
+	email     string
+	isActive  bool
+}
+
+type Group struct {
+	name        string
+	admin       User
+	users       []User
+	isAvaliable bool
+}
+
+func main() {
+	user1 := User{1, "Yosho", "Prasetiyo", "prasetiyo2020@yahoo.com", true}
+	user2 := User{2, "Diana", "Syafitri", "diana2020@yahoo.com", true}
+
+	users := []User{user1, user2}
+
+	group := Group{"Gagak Hitam", user1, users, true}
+
+	displayGroup(group)
+}
+
+func displayGroup(group Group) {
+	fmt.Printf("Nama Group : %s", group.name)
+	fmt.Println("")
+	fmt.Printf("Jumlah Anggota : %d", len(group.users))
+	fmt.Println("")
+
+	fmt.Println("Nama Anggota : ")
+	fmt.Println("================")
+	for _, user := range group.users {
+		fmt.Println(user.firstName)
+	}
+
+	fmt.Println("================")
+	fmt.Println("Status Group")
+	if group.isAvaliable == true {
+		fmt.Println("Tersedia")
+	} else {
+		fmt.Println("Tidak Tersedia")
+	}
+}
+```
+
+```
+$ go run .
+> Nama Group : Gagak Hitam
+> Jumlah Anggota : 2
+> Nama Anggota :
+> ================
+> Yosho
+> Diana
+> ================
+> Status Group
+> Tidak Tersedia
+```
