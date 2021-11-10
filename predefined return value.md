@@ -28,3 +28,56 @@ $ go run .
 > Keliling : 
 > 28
 ```
+
+### Contoh ke-2
+```golang
+package main
+
+import "fmt"
+
+func main() {
+	scores := []int{10, 5, 9, 8, 7}
+
+	// Mencari total niali dari array
+	var total int
+	for _, score := range scores {
+		total = total + score
+	}
+
+	fmt.Println("Total nilai pada array adalah : ")
+	fmt.Println(total)
+
+	addition, substraction, multiple, division := calculation(3, 2)
+	fmt.Println("Total pertambahan : ")
+	fmt.Println(addition)
+	fmt.Println("Total perkurangan : ")
+	fmt.Println(substraction)
+	fmt.Println("Total perkalian : ")
+	fmt.Println(multiple)
+	fmt.Println("Total pembagian : ")
+	fmt.Println(division)
+}
+
+func calculation(number1 int, number2 int) (addition int, substraction int, multiple int, division int) {
+	addition = number1 + number2
+	substraction = number1 - number2
+	multiple = number1 * number2
+	division = number1 / number2
+
+	return
+}
+
+```
+```
+$ go run .
+> Total nilai pada array adalah :
+> 39
+> Total pertambahan :
+> 5
+> Total perkurangan :
+> 1
+> Total perkalian :
+> 6
+> Total pembagian :
+> 1
+```
