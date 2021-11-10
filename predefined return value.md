@@ -37,13 +37,8 @@ import "fmt"
 
 func main() {
 	scores := []int{10, 5, 9, 8, 7}
-
-	// Mencari total niali dari array
-	var total int
-	for _, score := range scores {
-		total = total + score
-	}
-
+	
+	total := sum(scores)
 	fmt.Println("Total nilai pada array adalah : ")
 	fmt.Println(total)
 
@@ -56,6 +51,16 @@ func main() {
 	fmt.Println(multiple)
 	fmt.Println("Total pembagian : ")
 	fmt.Println(division)
+}
+
+// Fungsi mencari total nilai
+func sum(numbers []int) int {
+	var total int
+	for _, number := range numbers {
+		total = total + number
+	}
+
+	return total
 }
 
 func calculation(number1 int, number2 int) (addition int, substraction int, multiple int, division int) {
