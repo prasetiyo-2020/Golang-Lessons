@@ -74,3 +74,23 @@ func graduate(student *Student) {
 }
 
 ```
+
+## Method dengan pointer receiver
+``` golang
+type Student struct {
+	id   int
+	name string
+	GPA  float64
+}
+
+func (student *Student) graduate() {
+	student.name = student.name + " S. Kom"
+	fmt.Println("Nama setelah lulus : " + student.name)
+}
+
+func main() {
+	student := Student{1, "Prasetiyo", 3.78}
+	fmt.Println("Nama sebelum lulus : " + student.name) // Nama sebelum lulus : Prasetiyo
+	student.graduate()                                  // Nama setelah lulus : Prasetiyo S. Kom
+}
+```
