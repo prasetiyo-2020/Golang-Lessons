@@ -213,3 +213,73 @@ $ go run .
 > Name : Yosho Prasetiyo
 > Email : prasetiyo2020@yahoo.com
 ```
+
+## Method 2
+```golang
+package main
+
+import "fmt"
+
+type User struct {
+	id        int
+	firstName string
+	lastName  string
+	email     string
+	isActive  bool
+}
+
+func (user User) display() string {
+	return fmt.Sprintf("Name : %s %s \nEmail : %s", user.firstName, user.lastName, user.email)
+}
+
+type Group struct {
+	name        string
+	admin       User
+	users       []User
+	isAvaliable bool
+}
+
+func (group Group) DisplayGroup() {
+	fmt.Printf("Nama Group : %s", group.name)
+	fmt.Println("")
+	fmt.Printf("Jumlah Anggota : %d", len(group.users))
+	fmt.Println("")
+
+	fmt.Println("Nama Anggota : ")
+	fmt.Println("================")
+	for _, user := range group.users {
+		fmt.Println(user.firstName)
+	}
+
+	fmt.Println("================")
+	fmt.Println("Status Group")
+	if group.isAvaliable == true {
+		fmt.Println("Tersedia")
+	} else {
+		fmt.Println("Tidak Tersedia")
+	}
+}
+
+func main() {
+	user1 := User{1, "Yosho", "Prasetiyo", "prasetiyo2020@yahoo.com", true}
+	user2 := User{2, "Diana", "Syafitri", "diana2020@yahoo.com", true}
+	users := []User{user1, user2}
+
+	group := Group{"Gagak Hitam", user1, users, true}
+	group.DisplayGroup()
+}
+
+```
+
+```
+$ go run .
+Nama Group : Gagak Hitam
+Jumlah Anggota : 2
+Nama Anggota :
+================
+Yosho
+Diana
+================
+Status Group
+Tersedia
+```
