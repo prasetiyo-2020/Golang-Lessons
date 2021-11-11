@@ -179,3 +179,37 @@ $ go run .
 > Status Group
 > Tidak Tersedia
 ```
+
+## Method
+```golang
+package main
+
+import "fmt"
+
+type User struct {
+	id        int
+	firstName string
+	lastName  string
+	email     string
+	isActive  bool
+}
+
+func (user User) display() string {
+	return fmt.Sprintf("Name : %s %s \nEmail : %s", user.firstName, user.lastName, user.email)
+}
+
+func main() {
+	user1 := User{1, "Yosho", "Prasetiyo", "prasetiyo2020@yahoo.com", true}
+	user2 := User{2, "Diana", "Syafitri", "diana2020@yahoo.com", true}
+
+	result := user1.display()
+	fmt.Println(result)
+	fmt.Println(user2.display())
+}
+```
+
+```
+$ go run .
+> Name : Yosho Prasetiyo
+> Email : prasetiyo2020@yahoo.com
+```
