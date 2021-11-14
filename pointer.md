@@ -94,3 +94,33 @@ func main() {
 	student.graduate()                                  // Nama setelah lulus : Prasetiyo S. Kom
 }
 ```
+
+##  Method dengan pointer receiver 2
+``` golang
+type Gamer struct {
+	name  string
+	games []string
+}
+
+func (gamer *Gamer) AddGame(game string) {
+	gamer.games = append(gamer.games, game)
+}
+
+func main() {
+	gamer := Gamer{name: "Prasetiyo"}
+
+	gamer.AddGame("Dota 2")
+	gamer.AddGame("Point Blank")
+	gamer.AddGame("Lost Saga")
+
+	for _, game := range gamer.games {
+		fmt.Println(game)
+	}
+}
+```
+```
+$ go run .
+> Dota 2
+> Point Blank
+> Lost Saga
+```
