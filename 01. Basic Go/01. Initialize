@@ -1,0 +1,4 @@
+```
+$ go mod init testgolang
+> go: creating new go.mod: module testgolang
+```
