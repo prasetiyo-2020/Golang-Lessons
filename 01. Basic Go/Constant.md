@@ -15,6 +15,28 @@ $ go run main.go
 > Prasetiyo
 ```
 
+## Deklarasi Multiple Variable menggunakan Const
+``` golang
+package main
+
+import "fmt"
+
+func main() {
+	const (
+		firstName = "Yosho"
+		lastName  = "Prasetiyo"
+	)
+
+	fmt.Println(firstName)
+	fmt.Println(lastName)
+}
+```
+```
+$ go run main.go
+> Yosho
+> Prasetiyo
+```
+
 
 ## Jika mengubah isi dari tipe variabel const
 ``` golang
