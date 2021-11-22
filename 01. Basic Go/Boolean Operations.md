@@ -6,6 +6,24 @@
 | II | Atau |
 | ! | Kebalikan |
 
+## AND / &&
+| Kondisi 1  | Kondisi 2  | Output  | 
+| :---: | :---: | :---: |
+| true | true | true |
+| true | false | false |
+| false | true | false |
+| false | false | false |
+
+## OR / ||
+| Kondisi 1  | Kondisi 2  | Output  | 
+| :---: | :---: | :---: |
+| true | true | true |
+| true | false | true |
+| false | true | true |
+| false | false | false |
+
+## Example
+
 #### true && true = true
 ```golang
 func main() {
@@ -36,6 +54,7 @@ func main() {
 }
 
 ```
+
 
 #### false || true = true
 ``` golang
