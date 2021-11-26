@@ -24,3 +24,6 @@ Berikut merupakan beberapa framework milik bahasa pemrograman Go, diantaranya ad
 - Goji
 - Revel
 - Gocraft
+
+## Referensi-Referensi
+[1] https://www.sekawanmedia.co.id/belajar-golang/
