@@ -1,6 +1,9 @@
 # Golang-Lessons
+
 ## Pengertian Golang
 Bahasa pemrograman Go atau disingkat dengan Golang adalah programming language yang diciptakan oleh Google bersama dengan Ken Thompson, Robert Griesemer, dan Rob Pike pada tahun 2009. Tujuan dari pengembangannya adalah untuk membangun bahasa yang mempunyai keunggulan dari sisi kecepatan, keandalan, skalabilitas, dan kesederhanaan. [[1]](https://www.sekawanmedia.co.id/belajar-golang/)
+<br><br>
+![image](https://user-images.githubusercontent.com/84963363/143912941-652726e1-bad3-4fa2-9b0d-c605b490a063.png)
 
 ## Fungsi Golang
 Berikut ini merupakan beberapa fungsi yang dimiliki oleh Golang dan dapat anda terapkan pada bisnis atau pekerjaan anda. [[1]](https://www.sekawanmedia.co.id/belajar-golang/)
