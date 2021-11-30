@@ -1,5 +1,7 @@
-## Constant
-
+# Constant
+- Constant adalah variable yang nilainya tidak bisa diubah lagi setelah pertama kali diberi nilai
+- Cara pembuatan constant mirip dengan variable yang membedakan hanya kata kunci yang digunakan adalah const, bukan var
+- Saat pembuatan constant, kita wajib langsung menginisialisasikan datanya
 ``` golang
 func main() {
 	const firstName = "Yosho"
@@ -17,33 +19,19 @@ $ go run main.go
 
 ## Deklarasi Multiple Variable menggunakan Const
 ``` golang
-package main
-
-import "fmt"
-
 func main() {
 	const (
 		firstName = "Yosho"
 		lastName  = "Prasetiyo"
 	)
 
-	fmt.Println(firstName)
-	fmt.Println(lastName)
+	fmt.Println(firstName) // Yosho
+	fmt.Println(lastName)  // Prasetiyo
 }
 ```
-```
-$ go run main.go
-> Yosho
-> Prasetiyo
-```
 
-
-## Jika mengubah isi dari tipe variabel const
+## Ketika mengubah isi dari tipe variabel const
 ``` golang
-package main
-
-import "fmt"
-
 func main() {
 	const firstName = "Yosho"
 	const lastName string = "Prasetiyo"
