@@ -1,1 +1,1 @@
-### Iseng aja kalau lagi bosan.
+# Dikala Bosan
